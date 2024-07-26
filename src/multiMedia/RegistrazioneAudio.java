@@ -39,6 +39,7 @@ public class RegistrazioneAudio extends ElementoMultimediale implements Riproduc
         this.durata = durata;
     }
 
+    @Override
     public void play() {
         StringBuilder out = new StringBuilder();
         out.append("Titolo: ");

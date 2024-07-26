@@ -18,10 +18,12 @@ public class Immagine extends ElementoMultimediale implements ConVideo {
         this.luminosita = luminosita;
     }
 
+    @Override
     public void aumentaLuminosita(int n) {
         setLuminosita(this.getLuminosita() + n);
     }
 
+    @Override
     public void diminuisciLuminosita(int n) {
         setLuminosita(this.getLuminosita() - n);
     }
