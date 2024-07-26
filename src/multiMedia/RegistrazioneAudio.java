@@ -41,6 +41,7 @@ public class RegistrazioneAudio extends ElementoMultimediale implements Riproduc
 
     public void play() {
         StringBuilder out = new StringBuilder();
+        out.append("Titolo: ");
         for (int i = 0; i < this.getDurata(); i++) {
             out.append(i).append(": ").append(this.getTitolo()).append(" ");
         }
