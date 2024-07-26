@@ -1,6 +1,8 @@
 package multiMedia;
 
-public class Immagine extends ElementoMultimediale {
+import multiMedia.interfacce.ConVideo;
+
+public class Immagine extends ElementoMultimediale implements ConVideo {
     private int luminosita;
 
     public Immagine(String titolo, int luminosita) {
