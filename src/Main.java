@@ -10,7 +10,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         ElementoMultimediale[] elementi = new ElementoMultimediale[5];
         boolean exit = false;
-
+        //MENU PRINCIPALE
         while (!exit) {
             System.out.println("Scegli un'opzione:");
             System.out.println("1. Crea 5 elementi multimediali");
@@ -23,6 +23,7 @@ public class Main {
             scanner.nextLine();
 
             switch (scelta) {
+                //CREAZIONE ELEMENTI
                 case 1:
                     for (int i = 0; i < 5; i++) {
                         System.out.println("Scegli il tipo di elemento (1.Immagine 2.Registrazione Audio 3.Video):");
@@ -78,10 +79,11 @@ public class Main {
                     }
                     break;
 
+                //ALZA o ABBASSA VOLUME
                 case 2:
                     System.out.println("Scegli l'elemento, da 1 a 5:");
                     int indiceVolume = scanner.nextInt() - 1;
-                    scanner.nextLine();  // Consume newline
+                    scanner.nextLine();
                     if (indiceVolume >= 0 && indiceVolume < 5) {
                         ElementoMultimediale elementoVolume = elementi[indiceVolume];
                         switch (elementoVolume.getClass().getSimpleName()) {
@@ -134,7 +136,7 @@ public class Main {
                         System.out.println("Indice non valido. Inserisci un numero da 1 a 5.");
                     }
                     break;
-
+                //AUMENTA o DIMINUISCI LUMINOSITA
                 case 3:
                     System.out.println("Scegli l'elemento, da 1 a 5:");
                     int indiceLuminosita = scanner.nextInt() - 1;
@@ -192,10 +194,11 @@ public class Main {
                     }
                     break;
 
+                //STAMPA DI UN ELEMENTO A SCELTA
                 case 4:
                     System.out.println("Scegli l'elemento, da 1 a 5:");
                     int indiceRiproduci = scanner.nextInt() - 1;
-                    scanner.nextLine();  // Consume newline
+                    scanner.nextLine();
                     if (indiceRiproduci >= 0 && indiceRiproduci < 5) {
                         ElementoMultimediale elementoRiproduci = elementi[indiceRiproduci];
                         switch (elementoRiproduci.getClass().getSimpleName()) {
@@ -217,6 +220,7 @@ public class Main {
                     }
                     break;
 
+                //EXIT MENU
                 case 5:
                     exit = true;
                     break;
