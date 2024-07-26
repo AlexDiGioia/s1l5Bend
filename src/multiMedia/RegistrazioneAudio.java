@@ -1,8 +1,9 @@
 package multiMedia;
 
+import multiMedia.interfacce.ConSuono;
 import multiMedia.interfacce.Riproducibile;
 
-public class RegistrazioneAudio extends ElementoMultimediale implements Riproducibile {
+public class RegistrazioneAudio extends ElementoMultimediale implements Riproducibile, ConSuono {
     private int volume;
     private int durata;
 

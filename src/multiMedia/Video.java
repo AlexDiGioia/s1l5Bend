@@ -1,8 +1,10 @@
 package multiMedia;
 
+import multiMedia.interfacce.ConSuono;
+import multiMedia.interfacce.ConVideo;
 import multiMedia.interfacce.Riproducibile;
 
-public class Video extends ElementoMultimediale implements Riproducibile {
+public class Video extends ElementoMultimediale implements Riproducibile, ConVideo, ConSuono {
     private int volume;
     private int luminosita;
     private int durata;
